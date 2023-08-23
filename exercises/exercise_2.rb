@@ -11,20 +11,25 @@ puts "----------"
 # Update the first store (@store1) instance in the database. (Change its name or something.)
 
 
-class Exercise2
+# class Exercise2
 
-  attr_accessor :store1, :store2
+#   attr_accessor :store1, :store2
 
-  def initialize(store1, store2)
-    @store1 = store1
-    @store2 = store2
-  end
+#   def initialize(store1, store2)
+#     @store1 = store1
+#     @store2 = store2
+#   end
 
-  def update(name)
-    @store1.update(name: name)
-  end
+#   def update(name)
+#     @store1.update(name: name)
+#   end
 
-end
+# end
 
-exer2 = Exercise2.new(Store.find_by(id: 1), Store.find_by(id: 2))
-exer2.update("Calgary")
+# exer2 = Exercise2.new(Store.find_by(id: 1), Store.find_by(id: 2))
+# exer2.update("Calgary")
+
+
+@store1 = Store.find_by(id: 1)
+@store2 = Store.find_by(id: 2)
+@store1.update(name: "Calgary")
